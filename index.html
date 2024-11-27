@@ -3,79 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Ciel's Tea Shop</title>
     <link href="index.css" rel="stylesheet" />
+    <style>
+      /* Базовые стили для мобильных устройств */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+      .section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .text-content,
+      .image-content {
+        width: 100%;
+        text-align: center;
+      }
+      .image-content img,
+      .text-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #007bff;
+      }
+
+      /* Для больших экранов */
+      @media (min-width: 768px) {
+        .text-content,
+        .image-content {
+          width: 48%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
+      <!-- Первая секция -->
       <div class="section">
         <div class="text-content">
-          <img
-          src="qq.png"
-          alt="Cup of tea">
-          <img
-            src="aa.png"
-            alt="Cup of tea">
-            <img
-          src="ss.png"
-          alt="Cup of tea">
-          <img
-          src="xx.png"
-          alt="Cup of tea"/>
+          <picture>
+            <source media="(max-width: 767px)" srcset="qq-small.png" />
+            <source media="(min-width: 768px)" srcset="qq.png" />
+            <img src="qq.png" alt="Cup of tea" />
+          </picture>
+          <picture>
+            <source media="(max-width: 767px)" srcset="aa-small.png" />
+            <source media="(min-width: 768px)" srcset="aa.png" />
+            <img src="aa.png" alt="Cup of tea" />
+          </picture>
+          <picture>
+            <source media="(max-width: 767px)" srcset="ss-small.png" />
+            <source media="(min-width: 768px)" srcset="ss.png" />
+            <img src="ss.png" alt="Cup of tea" />
+          </picture>
+          <picture>
+            <source media="(max-width: 767px)" srcset="xx-small.png" />
+            <source media="(min-width: 768px)" srcset="xx.png" />
+            <img src="xx.png" alt="Cup of tea" />
+          </picture>
           <a href="rwerwe">more</a>
         </div>
         <div class="image-content">
-          <img
-            src="zz.png"
-            alt="Cup of tea"
-          />
-        </div>
-      </div>
-<section>
-      <div class="section">
-        <div class="image-content">
-   <p>
-         <img
-         src="cc.png"
-         alt="Tea setup" 
-      />
-      
-      </p>
-    
-        </div>
-        <div class="text-content">  
-          <img
-            src="rr.png"
-            alt="Tea setup"
-          />  
-          <img
-            src="bb.png"
-            alt="Tea setup"     > 
-            <a href="rewrew"> More</a> 
-     
+          <picture>
+            <source media="(max-width: 767px)" srcset="zz-small.png" />
+            <source media="(min-width: 768px)" srcset="zz.png" />
+            <img src="zz.png" alt="Cup of tea" />
+          </picture>
         </div>
       </div>
 
-      <div class="section">
-        <div class="text-content">
-          <img
-            src="nn.png"
-              alt="Relaxing tea"
-            />
-            <img
-            src="xx.png"
-              alt="Relaxing tea"
-            />
+      <!-- Вторая секция -->
+      <section>
+        <div class="section">
+          <div class="image-content">
+            <picture>
+              <source media="(max-width: 767px)" srcset="cc-small.png" />
+              <source media="(min-width: 768px)" srcset="cc.png" />
+              <img src="cc.png" alt="Tea setup" />
+            </picture>
+          </div>
+          <div class="text-content">
+            <picture>
+              <source media="(max-width: 767px)" srcset="rr-small.png" />
+              <source media="(min-width: 768px)" srcset="rr.png" />
+              <img src="rr.png" alt="Tea setup" />
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="bb-small.png" />
+              <source media="(min-width: 768px)" srcset="bb.png" />
+              <img src="bb.png" alt="Tea setup" />
+            </picture>
+            <a href="rewrew">More</a>
+          </div>
+        </div>
 
+        <!-- Третья секция -->
+        <div class="section">
+          <div class="text-content">
+            <picture>
+              <source media="(max-width: 767px)" srcset="nn-small.png" />
+              <source media="(min-width: 768px)" srcset="nn.png" />
+              <img src="nn.png" alt="Relaxing tea" />
+            </picture>
+            <picture>
+              <source media="(max-width: 767px)" srcset="xx-small.png" />
+              <source media="(min-width: 768px)" srcset="xx.png" />
+              <img src="xx.png" alt="Relaxing tea" />
+            </picture>
             <a href="rwerw">Shop</a>
           </div>
           <div class="image-content">
-          <img
-            src="vv.png"
-            alt="Relaxing tea"
-          />
+            <picture>
+              <source media="(max-width: 767px)" srcset="vv-small.png" />
+              <source media="(min-width: 768px)" srcset="vv.png" />
+              <img src="vv.png" alt="Relaxing tea" />
+            </picture>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   </body>
 </html>
