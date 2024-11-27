@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Ciel's Tea Shop</title>
+    <link href="index.css" rel="stylesheet" />
     <style>
-      /* Общие стили для мобильных устройств */
+      /* Базовые стили для мобильных устройств */
       body {
         margin: 0;
         font-family: Arial, sans-serif;
         background-color: #f4f4f4;
-        overflow-x: hidden; /* Убираем горизонтальную прокрутку */
       }
       .container {
         display: flex;
@@ -20,54 +20,32 @@
       }
       .section {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
         margin-bottom: 20px;
       }
-      .section img {
+      .text-content,
+      .image-content {
         width: 100%;
+        text-align: center;
+      }
+      .image-content img,
+      .text-content img {
+        max-width: 100%;
         height: auto;
         display: block;
-        margin-bottom: 10px;
+        margin: 0 auto;
       }
       a {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 16px;
         text-decoration: none;
         color: #007bff;
-        font-size: 18px;
-        text-align: center;
-        margin-top: 10px;
-        display: inline-block;
       }
 
-      /* Мобильная версия: стили для маленьких экранов */
-      @media (max-width: 768px) {
-        .section {
-          padding: 0 15px;
-        }
-
-        .text-content,
-        .image-content {
-          width: 100%;
-          text-align: center;
-        }
-
-        .text-content img,
-        .image-content img {
-          max-width: 100%;
-          height: auto;
-        }
-
-        .container {
-          padding: 5px;
-        }
-      }
-
-      /* Для экранов больше 768px (десктопы) */
+      /* Для больших экранов */
       @media (min-width: 768px) {
-        .section {
-          flex-direction: row;
-          justify-content: space-between;
-        }
-
         .text-content,
         .image-content {
           width: 48%;
@@ -81,31 +59,31 @@
       <div class="section">
         <div class="text-content">
           <picture>
-            <source media="(max-width: 768px)" srcset="qq-small.png" />
-            <source media="(min-width: 769px)" srcset="qq.png" />
+            <source media="(max-width: 767px)" srcset="qq-small.png" />
+            <source media="(min-width: 768px)" srcset="qq.png" />
             <img src="qq.png" alt="Cup of tea" />
           </picture>
           <picture>
-            <source media="(max-width: 768px)" srcset="aa-small.png" />
-            <source media="(min-width: 769px)" srcset="aa.png" />
+            <source media="(max-width: 767px)" srcset="aa-small.png" />
+            <source media="(min-width: 768px)" srcset="aa.png" />
             <img src="aa.png" alt="Cup of tea" />
           </picture>
           <picture>
-            <source media="(max-width: 768px)" srcset="ss-small.png" />
-            <source media="(min-width: 769px)" srcset="ss.png" />
+            <source media="(max-width: 767px)" srcset="ss-small.png" />
+            <source media="(min-width: 768px)" srcset="ss.png" />
             <img src="ss.png" alt="Cup of tea" />
           </picture>
           <picture>
-            <source media="(max-width: 768px)" srcset="xx-small.png" />
-            <source media="(min-width: 769px)" srcset="xx.png" />
+            <source media="(max-width: 767px)" srcset="xx-small.png" />
+            <source media="(min-width: 768px)" srcset="xx.png" />
             <img src="xx.png" alt="Cup of tea" />
           </picture>
-          <a href="rwerwe">More</a>
+          <a href="rwerwe">more</a>
         </div>
         <div class="image-content">
           <picture>
-            <source media="(max-width: 768px)" srcset="zz-small.png" />
-            <source media="(min-width: 769px)" srcset="zz.png" />
+            <source media="(max-width: 767px)" srcset="zz-small.png" />
+            <source media="(min-width: 768px)" srcset="zz.png" />
             <img src="zz.png" alt="Cup of tea" />
           </picture>
         </div>
@@ -116,20 +94,20 @@
         <div class="section">
           <div class="image-content">
             <picture>
-              <source media="(max-width: 768px)" srcset="cc-small.png" />
-              <source media="(min-width: 769px)" srcset="cc.png" />
+              <source media="(max-width: 767px)" srcset="cc-small.png" />
+              <source media="(min-width: 768px)" srcset="cc.png" />
               <img src="cc.png" alt="Tea setup" />
             </picture>
           </div>
           <div class="text-content">
             <picture>
-              <source media="(max-width: 768px)" srcset="rr-small.png" />
-              <source media="(min-width: 769px)" srcset="rr.png" />
+              <source media="(max-width: 767px)" srcset="rr-small.png" />
+              <source media="(min-width: 768px)" srcset="rr.png" />
               <img src="rr.png" alt="Tea setup" />
             </picture>
             <picture>
-              <source media="(max-width: 768px)" srcset="bb-small.png" />
-              <source media="(min-width: 769px)" srcset="bb.png" />
+              <source media="(max-width: 767px)" srcset="bb-small.png" />
+              <source media="(min-width: 768px)" srcset="bb.png" />
               <img src="bb.png" alt="Tea setup" />
             </picture>
             <a href="rewrew">More</a>
@@ -140,21 +118,21 @@
         <div class="section">
           <div class="text-content">
             <picture>
-              <source media="(max-width: 768px)" srcset="nn-small.png" />
-              <source media="(min-width: 769px)" srcset="nn.png" />
+              <source media="(max-width: 767px)" srcset="nn-small.png" />
+              <source media="(min-width: 768px)" srcset="nn.png" />
               <img src="nn.png" alt="Relaxing tea" />
             </picture>
             <picture>
-              <source media="(max-width: 768px)" srcset="xx-small.png" />
-              <source media="(min-width: 769px)" srcset="xx.png" />
+              <source media="(max-width: 767px)" srcset="xx-small.png" />
+              <source media="(min-width: 768px)" srcset="xx.png" />
               <img src="xx.png" alt="Relaxing tea" />
             </picture>
             <a href="rwerw">Shop</a>
           </div>
           <div class="image-content">
             <picture>
-              <source media="(max-width: 768px)" srcset="vv-small.png" />
-              <source media="(min-width: 769px)" srcset="vv.png" />
+              <source media="(max-width: 767px)" srcset="vv-small.png" />
+              <source media="(min-width: 768px)" srcset="vv.png" />
               <img src="vv.png" alt="Relaxing tea" />
             </picture>
           </div>
